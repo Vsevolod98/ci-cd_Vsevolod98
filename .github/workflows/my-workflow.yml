@@ -11,11 +11,11 @@ jobs:
       - name: run build
         run: gradle clean build
 
-#      - name: Upload test.exec
-#        uses: 'actions/upload-artifact@v3'
-#        with:
-#          name: testexecution
-#          path: ${{ github.workspace }}/build/jacoco
+      - name: Upload test.exec
+        uses: 'actions/upload-artifact@v3'
+        with:
+          name: testexecution
+          path: ${{ github.workspace }}/build/jacoco
 
   checkstyle:
     runs-on: ubuntu-latest
