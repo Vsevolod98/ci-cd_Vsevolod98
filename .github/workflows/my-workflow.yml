@@ -15,7 +15,7 @@ jobs:
         uses: 'actions/upload-artifact@v3'
         with:
           name: testexecution
-          path: ${{ github.workspace }}/build/jacoco
+          path: ${{ github.workspace }}/build/jacoco/test.exec
 
   checkstyle:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
         uses: 'actions/download-artifact@v3'
         with:
           name: testexecution
-          path: ${{ github.workspace }}/build/jacoco
+          path: ${{ github.workspace }}/build/jacoco/test.exec
 
       - name: Run Coverage
         run: gradle jacocoTestReport
