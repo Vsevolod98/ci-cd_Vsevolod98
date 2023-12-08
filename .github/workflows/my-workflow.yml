@@ -42,11 +42,11 @@ jobs:
         with:
           java-version: 21
 
-#      - name: download test.exec
-#        uses: 'actions/download-artifact@v2'
-#        with:
-#          name: testexecution
-#          path: ${{ github.workspace }}/build/jacoco
+      - name: download test.exec
+        uses: 'actions/download-artifact@v2'
+        with:
+          name: testexecution
+          path: ${{ github.workspace }}/build/jacoco
 
       - name: Run Coverage
         run: gradle test jacocoTestReport
